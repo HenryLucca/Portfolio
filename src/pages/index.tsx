@@ -1,42 +1,29 @@
-import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import PresentationCard from "@/components/PresentationCard";
+import { useState } from "react";
+import ThemeButton from "@/components/ThemeButton";
+import MainPageContent from "@/components/main-page/MainPageContent";
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 
 export default function Home() {
+  const [theme, setTheme] = useState(""); // empty string = light theme, 'dark' = dark theme
+
   return (
-    <div className="scroll-smooth">
-      {" "}
-      {/* <--- this div */}
-      <Navbar />
-      <main
-        className={`flex min-h-screen flex-col items-center justify-between p-24 ${playfairDisplay.className}`}
+    <div className={`${theme} scroll-smooth ${playfairDisplay.className}`}>
+      <div
+        className={`bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100`}
       >
-        <PresentationCard />
-        <div className="flex flex-col items-center justify-center">
-          <a
-            href="#about"
-            className="text-2xl font-semibold mt-8 hover:text-gray-400"
-          >
-            About
-          </a>
-          <a
-            href="#projects"
-            className="text-2xl font-semibold mt-8 hover:text-gray-400"
-          >
-            Projects
-          </a>
-          <a
-            href="#contact"
-            className="text-2xl font-semibold mt-8 hover:text-gray-400"
-          >
-            Contact
-          </a>
-        </div>
-      </main>
-      <footer id="about">© 2023 Henry Lucca - Todos os direitos reservados.</footer>
+        <Navbar />
+        
+        <MainPageContent />
+
+        <ThemeButton theme={theme} setTheme={setTheme} />
+
+        <footer className="flex justify-center items-center">
+          <p>© 2023 Henry Lucca - Todos os direitos reservados.</p>
+        </footer>
+      </div>
     </div>
   );
 }
