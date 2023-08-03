@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function PresentationCard() {
+  const {t} = useTranslation("presentation-card")
   return (
     <section
       className={`
@@ -21,14 +23,13 @@ export default function PresentationCard() {
 
       <div className="flex flex-col items-center justify-center gap-5">
         <p className="flex flex-col md:flex-row items-baseline justify-center gap-2 text-xl font-bold">
-          <span>Hi there! I'm</span>
+          <span>{t('greeting')}</span>
           <span className="text-4xl md:ml-2">Henry Lucca 🥳</span>
           {/* <span>🥳</span> */}
         </p>
 
         <p className="text-lg sm:text-2xl w-12/12 sm:w-9/12 text-center">
-          I'm an idea developer who wants to build a better world through
-          software focused on web development.
+          {t('presentation')}
         </p>
       </div>
     </section>
