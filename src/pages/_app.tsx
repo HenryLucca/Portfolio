@@ -1,9 +1,17 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import { appWithI18Next } from 'ni18n'
+import { appWithI18Next, useSyncLanguage } from 'ni18n'
 import { ni18nConfig } from '../../ni18n.config'
+import { use } from 'i18next';
 
 function App({ Component, pageProps }: AppProps) {
+  // const locale = typeof window !== 'undefined' ? window.location.pathname.split('/')[1] : 'en'
+  const locale = typeof window !== 'undefined' && window.localStorage.getItem('lang') || undefined;
+  if (locale){
+    useSyncLanguage(locale);
+  } else {
+    useSyncLanguage('pt-BR');
+  }
   return <Component {...pageProps} />
 }
 
