@@ -5,7 +5,7 @@ export default function Projects(){
     const {t} =  useTranslation("projects");
     return (
         <section id="projects" className="w-screen flex flex-col items-center rounded-lg">
-            <div className="bg-zinc-100 dark:bg-zinc-700 w-4/5 flex flex-col items-center rounded-lg">
+            <div className="bg-zinc-100 dark:bg-zinc-700 w-4/5 md:w-11/12 flex flex-col items-center rounded-lg">
             <h2 className="bg-zinc-200 dark:bg-zinc-600 px-2 py-1 mt-2 rounded-3xl text-2xl font-semibold">{t('highlighted-projects')}</h2>
             <div className="flex flex-col gap-2 p-3">
                 <ProjectItem 
