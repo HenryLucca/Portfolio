@@ -4,11 +4,14 @@ import { useState } from "react";
 import ThemeButton from "@/components/ThemeButton";
 import MainPageContent from "@/components/main-page/MainPageContent";
 import { LanguageSwitch } from "@/components/LanguageSwitch";
+import { useTranslation } from "react-i18next";
+import { GithubIcon, LinkedInIcon } from "@/icons/icons";
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 
 export default function Home() {
   const [theme, setTheme] = useState(""); // empty string = light theme, 'dark' = dark theme
+  const {t} = useTranslation("common");
 
   return (
     <div className={`${theme} scroll-smooth ${playfairDisplay.className}`}>
@@ -24,8 +27,12 @@ export default function Home() {
           <ThemeButton theme={theme} setTheme={setTheme} />
         </div>
 
-        <footer className="flex justify-center items-center">
-          <p>© 2023 Henry Lucca - Todos os direitos reservados.</p>
+        <footer className="flex flex-col justify-center items-center text-center">
+          
+          <p className="text-xs">{t("made-with")}</p>
+          <p className="text-xs">
+            © 2023 Henry Lucca - Todos os direitos reservados.
+          </p>
         </footer>
       </div>
     </div>

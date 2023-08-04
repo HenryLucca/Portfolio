@@ -2,6 +2,7 @@ import PresentationCard from "./PresentationCard";
 import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 export default function MainPageContent() {
   return (
@@ -18,6 +19,7 @@ export default function MainPageContent() {
       <Skills />
       <About />
       <Projects />
+      <Contact />
       
     </main>
   );
