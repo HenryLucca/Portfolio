@@ -19,7 +19,7 @@ export const LanguageSwitch = () => {
   const locale = typeof window !== 'undefined' && window.localStorage.getItem('lang') || undefined;
   return (
     <div>
-      {locale === "pt-BR" ? (
+      {locale === "pt-BR" || locale === undefined ? (
         <button
           data-id={`en-button`}
           className={i18n.language === "en" ? "active" : undefined}
