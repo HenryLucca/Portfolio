@@ -11,6 +11,7 @@ interface ProjectItemProps {
 }
 
 // Practicing different approach to create a component that receives props with typescript
+// TODO: Change approach, separate responsabilities. Move the tecnologyColor function to a utils file.
 const ProjectItem: React.FC<ProjectItemProps> = ({
   name,
   technologies,

@@ -10,7 +10,7 @@ export default function Contact(){
         id="contact"
         className="flex flex-col items-center rounded-lg bg-zinc-100 dark:bg-zinc-700"
       >
-        <h1 className="p-1 bg-zinc-200 dark:bg-zinc-600 rounded-lg m-1.5">{t('contact')}</h1>
+        <h1 className="p-1 bg-violet-300 dark:bg-violet-500 rounded-lg m-1.5">{t('contact')}</h1>
         <div className="flex flex-col items-center justify-center text-center gap-4">
           <p>{t('more-about-me')}</p>
           <div className="flex justify-center gap-4">

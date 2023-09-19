@@ -46,13 +46,15 @@ export default function PresentationCard() {
           <span>{t("contact-me")}</span>
           <UserCircleIcon />
         </a>
+
         <a
           onClick={downloadCV}
-          className="flex gap-0.5 bg-zinc-200 dark:bg-zinc-600 rounded-lg p-1"
+          className="flex gap-0.5 bg-violet-300 dark:bg-violet-500 rounded-lg p-1 cursor-pointer"
         >
           <span>Download CV</span>
           <DownloadIcon />
         </a>
+        
         <div className="flex gap-4">
           <a
             href="https://github.com/HenryLucca"
