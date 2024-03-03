@@ -24,6 +24,10 @@ export default function Home() {
           name="keywords"
           content="Henry Lucca, Lucca, Henry, Henrique, Henrique Lucca, Desenvolvedor, Desenvolvedor Web, Web Developer, Front End, Front End Developer, Full Stack, Full Stack Developer, Desenvolvedor Full Stack, Desenvolvedor Web Full Stack, Web Developer Full Stack, Desenvolvedor Web Full Stack, Desenvolvedor Full Stack, Desenvolvedor Full Stack"
         />
+        <meta
+          name="google-site-verification"
+          content="6rSfO2bekpa-6_W-ydAiIHIHs0AeZknJsW1E4j6jSZw"
+        />
       </Helmet>
 
       <div
